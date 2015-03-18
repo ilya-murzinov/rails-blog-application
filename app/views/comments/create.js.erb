@@ -1,8 +1,4 @@
-var new_comment = $("<%= escape_javascript(render(:partial => @comment)) %>");
-console.log(new_comment);
-new_comment.hide();
+var new_comment = $("<%= escape_javascript(render(:partial => @comment)) %>").hide();
 $('#comments').prepend(new_comment);
-console.log($('#comments'));
 $('#comment_<%= @comment.id %>').fadeIn('slow');
-console.log($('#comment_<%= @comment.id %>'));
 $('#new_comment')[0].reset();
